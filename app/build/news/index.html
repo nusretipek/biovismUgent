@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="active">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+    .news-section {
+        background-color: #ffffff;
+        padding: 0 1px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1280px;
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .news-grid {
+        background-color: #ffffff;
+        padding: 20px 1px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 auto;
+    }
+
+    .news-card:hover {
+      box-shadow: 0 2px 8px rgba(0, 200, 0, 0.5);
+      background-color: rgba(0, 200, 0 ,0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .news-grid {
+        margin-left: 0;
+        padding: 20px 10px;
+        justify-content: center;
+        overflow-x: hidden;
+      }
+
+      .news-card {
+        flex: 1 1 100%;
+        max-width: 90vw;
+        box-sizing: border-box;
+      }
+
+      .news-card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+</style>
+
+
+<section class="news-section">
+  <div class="news-grid">
+    
+    <div class="news-card">
+      <a href="/news/24-07-03-Defence-Umut-Kaya/">
+        <img src="/static/news/defenceUmutKaya.jpg" alt="News Image">
+        <h3>Public PhD Defence: Umut Kaya</h3>
+        <p class="news-date">July 03, 2024</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/23-06-09-CVPR/">
+        <img src="/static/news/CVPR.jpg" alt="News Image">
+        <h3>Maarten Perneel joins CV4Animals Workshop 2023</h3>
+        <p class="news-date">June 09, 2023</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/23-01-05-Paper-Arne-Deloose/">
+        <img src="/static/news/paperArne1.jpg" alt="News Image">
+        <h3>Congratulations on new paper published by Arne Deloose</h3>
+        <p class="news-date">January 05, 2023</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/22-09-01-BOF-Nusret-Ipek/">
+        <img src="/static/news/BOF.png" alt="News Image">
+        <h3>BOF scholarship for Nusret Ipek</h3>
+        <p class="news-date">September 01, 2022</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/22-07-05-CESPE-event/">
+        <img src="/static/news/cespe.png" alt="News Image">
+        <h3>CESPE conference on Manufacturing Innovations for a Sustainable (Bio)Pharmaceutical Industry</h3>
+        <p class="news-date">July 05, 2022</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/22-04-28-HierarchiaPy/">
+        <img src="/static/news/hierarchiaPy.png" alt="News Image">
+        <h3>HierarchiaPy published on PyPI</h3>
+        <p class="news-date">April 28, 2022</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/22-09-07-Position-VITO/">
+        <img src="/static/news/jobOpening.png" alt="News Image">
+        <h3>PhD position</h3>
+        <p class="news-date">April 28, 2022</p>
+      </a>
+    </div>
+    
+    <div class="news-card">
+      <a href="/news/22-02-02-Detectron2-Workshop/">
+        <img src="/static/news/detectronWorkshop.jpg" alt="News Image">
+        <h3>Detectron 2 Workshop</h3>
+        <p class="news-date">February 02, 2022</p>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

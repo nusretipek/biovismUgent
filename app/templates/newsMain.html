@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+    .news-section {
+        background-color: #ffffff;
+        padding: 0 1px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1280px;
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .news-grid {
+        background-color: #ffffff;
+        padding: 20px 1px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 auto;
+    }
+
+    .news-card:hover {
+      box-shadow: 0 2px 8px rgba(0, 200, 0, 0.5);
+      background-color: rgba(0, 200, 0 ,0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .news-grid {
+        margin-left: 0;
+        padding: 20px 10px;
+        justify-content: center;
+        overflow-x: hidden;
+      }
+
+      .news-card {
+        flex: 1 1 100%;
+        max-width: 90vw;
+        box-sizing: border-box;
+      }
+
+      .news-card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+</style>
+
+
+<section class="news-section">
+  <div class="news-grid">
+    {% for item in news %}
+    <div class="news-card">
+      <a href="{{ url_for('show_news', slug=item.slug) }}">
+        <img src="{{ url_for('static', filename='news/' ~ item.newsImagePath) }}" alt="News Image">
+        <h3>{{ item.title }}</h3>
+        <p class="news-date">{{ item.date.strftime('%B %d, %Y') }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+{% endblock %}

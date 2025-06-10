@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+  .page-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .page-container .publication-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .page-container .publication-authors{
+    font-size: 21px;
+    color: rgb(30, 100, 200);;
+    margin-bottom: 30px;
+  }
+
+  .page-container h2,
+  .page-container .publication-authors,
+  .page-container .publication-date {
+    text-align: center;
+    margin: 25px;
+  }
+  .publication-date {
+    font-size: 18px;
+  }
+  .page-container .button-container {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .page-container .button {
+    padding: 10px 20px;
+    background-color: rgb(30, 100, 200);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .page-container .publication-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-container .publication-abstract {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+</style>
+
+
+<div class="page-container">
+  <h2 class="publication-title">Automated particle inspection of continuously freeze-dried products using computer vision</h2>
+  <p class="publication-authors"><strong>Quentin Herve, Nusret Ipek, Jan Verwaeren, Thomas De Beer</strong></p>
+  <p class="publication-date">August 23, 2024</p>
+
+  <img src="/static/publication/Nusret_08_2024.jpg"
+       alt="Publication Image"
+       class="publication-image">
+
+  <div class="button-container">
+    
+    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0378517324008639"
+       class="button"
+       target="_blank">
+       📄 Paper
+    </a>
+  </div>
+
+  <p class="publication-abstract">The pharmaceutical industry is progressing towards more continuous manufacturing techniques. To dry biopharmaceuticals, continuous freeze drying has several advantages on manufacturing and process analytical control compared to batch freeze-drying, including better visual inspection potential. Visual inspection of every freeze-dried product is a key quality assessment after the lyophilization process to ensure that freeze-dried products are free from foreign particles and defects. This quality assessment is labor-intensive for operators who need to assess thousands of samples for an extensive amount of time leading to certain drawbacks. Applying Artificial Intelligence, specifically computer vision, on high-resolution images from every freeze-dried product can quantitatively and qualitatively outperform human visual inspection. For this study, continuously freeze-dried samples were prepared based on a real-world pharmaceutical product using manually induced particles of different sizes and subsequently imaged using a tailor-made setup to develop an image dataset (with particle sizes from 50 μm to 1 mm) used to train multiple object detection models. You Only Look Once version 7 (YOLOv7) outperforms human inspection by a large margin, obtaining particle detection precision of up to 88.9% while controlling the recall at 81.2%, thus detecting most of the object present in the images, with an inference time of less than 1 s per vial.</p>
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

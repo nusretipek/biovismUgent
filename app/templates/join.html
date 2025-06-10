@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+
+  .page-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .students-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .student-box {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .student-box img {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+  }
+
+  .student-text {
+    flex: 1;
+  }
+
+  .student-text h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: rgb(30, 100, 200);
+  }
+
+  .student-text p,
+  .student-text li {
+    font-size: 18px;
+    text-align: justify;
+    margin: 5px 0;
+  }
+
+  .title,
+  .titleContact {
+    margin: 0 0 20px;
+  }
+
+  .contact img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+
+  .contact div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2 {
+    font-family: sans-serif;
+    font-size: 21px;
+  }
+
+  @media (max-width: 1024px) {
+
+    .page-container {
+      padding: 0 10px;
+      overflow-x: hidden;
+    }
+
+    .students-section {
+      flex-direction: column;
+      gap: 40px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .student-box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .student-box img {
+      height: 80px;
+      width: 80px;
+    }
+
+    .student-text {
+      text-align: justify;
+    }
+
+    .student-text h3 {
+      font-size: 17px;
+    }
+
+    .student-text p,
+    .student-text li {
+      font-size: 15px;
+    }
+
+    iframe {
+      height: 300px;
+    }
+
+    .contact {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 0 10px;
+      max-width: 100%;
+    }
+
+    .contact div {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact img {
+      height: 28px;
+      width: 28px;
+    }
+  }
+
+</style>
+
+
+<div class="page-container">
+
+  <div class="title">
+    <h2><strong>Prospective Students</strong></h2>
+  </div>
+
+  <div class="students-section">
+    <div class="student-box">
+      <img src="{{ url_for('static', filename='icons/phd.png') }}" alt="PhD Icon">
+      <div class="student-text">
+        <h3><strong>PhD Students</strong></h3>
+        <p>Interested in joining the team as a PhD student? Check the following vacancies:</p>
+        <ul>
+          <li>
+            <p>There are no currently open positions.</p>
+          </li>
+          <li>
+            <p>
+              If you're interested in a PhD focusing on mathematical aspects of computer vision,
+              email your motivation letter, CV, and recent work (e.g., master's thesis) to
+              <a href="mailto:jan.verwaeren@ugent.be">jan.verwaeren@ugent.be</a>.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="student-box">
+      <img src="{{ url_for('static', filename='icons/grad.png') }}" alt="Graduate Icon">
+      <div class="student-text">
+        <h3><strong>Bachelor / Master Students</strong></h3>
+        <p>
+          Thank you for your interest in our research. Thesis topics for Bachelor and Master students can be found
+          <a href="https://www.ugent.be/bw/nl/voor-studenten#Curriculumsamenstellen">here</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="titleContact">
+    <h2><strong>Contact Information</strong></h2>
+  </div>
+
+  <iframe
+    width="100%"
+    height="320"
+    style="border: 0"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10032.062020593983!2d3.7089!3d51.0528015!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3716c05a9b1bd%3A0xe9c273e321db3dd9!2sUniversiteit%20Gent%20-%20Campus%20Coupure!5e0!3m2!1str!2sbe!4v1706356098587!5m2!1str!2sbe"
+    allowfullscreen>
+  </iframe>
+
+  <div class="contact">
+    <div>
+      <img src="{{ url_for('static', filename='icons/phone.png') }}" alt="Phone Icon">
+      <a href="tel:+32 9 264 59 33">+32 9 264 59 33</a>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='icons/email.png') }}" alt="Email Icon">
+      <a href="mailto:Jan.Verwaeren@UGent.be">Jan.Verwaeren@UGent.be</a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

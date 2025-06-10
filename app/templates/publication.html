@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+
+  .page-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .page-container .publication-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .page-container .publication-authors{
+    font-size: 21px;
+    color: rgb(30, 100, 200);;
+    margin-bottom: 30px;
+  }
+
+  .page-container h2,
+  .page-container .publication-authors,
+  .page-container .publication-date {
+    text-align: center;
+    margin: 25px;
+  }
+  .publication-date {
+    font-size: 18px;
+  }
+  .page-container .button-container {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .page-container .button {
+    padding: 10px 20px;
+    background-color: rgb(30, 100, 200);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .page-container .publication-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-container .publication-abstract {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+</style>
+
+
+<div class="page-container">
+  <h2 class="publication-title">{{ publication.title }}</h2>
+  <p class="publication-authors"><strong>{{ publication.authors }}</strong></p>
+  <p class="publication-date">{{ publication.date.strftime('%B %d, %Y') }}</p>
+
+  <img src="{{ url_for('static', filename='publication/' + publication.image) }}"
+       alt="Publication Image"
+       class="publication-image">
+
+  <div class="button-container">
+    {% set is_url = publication.pdf.startswith('http') or publication.pdf.startswith('https') %}
+    <a href="{{ publication.pdf if is_url else url_for('static', filename='publication/' + publication.pdf) }}"
+       class="button"
+       target="_blank">
+       📄 Paper
+    </a>
+  </div>
+
+  <p class="publication-abstract">{{ publication.abstract }}</p>
+</div>
+
+
+{% endblock %}

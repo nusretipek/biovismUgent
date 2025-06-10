@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+  .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 100px;
+  }
+
+  .profile-image-side {
+    flex: 0 0 250px;
+    text-align: center;
+  }
+
+  .profile-image-side img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .profile-name {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .profile-role {
+    color: gray;
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .profile{
+    color: rgb(30, 100, 200);
+    text-decoration: none;
+    font-size: 21px;
+  }
+
+  .profile-links {
+    margin: 25px 0;
+  }
+
+  .profile-links a img {
+    width: 38px;
+    height: 38px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+  .profile-links a img:hover {
+    background-color: #e8e8e8;
+  }
+
+  .profile-main-content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .profile-description {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+  }
+
+  .profile-sections {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .section-box {
+    flex: 1;
+    min-width: 320px;
+    max-width: 320px;
+  }
+
+  .section-box h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .section-box ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .section-box ul li {
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-left: 30px;
+  }
+
+  .section-box ul li::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icons/check.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+
+  .section-box-education {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .section-box-education h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .section-box-education ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .section-box-education ul li {
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-left: 30px;
+  }
+
+  .section-box-education ul li::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icons/cap.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 1024px) {
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      padding: 20px;
+      align-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .profile-image-side {
+      flex: 0 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .profile-name,
+    .profile-role,
+    .profile-links,
+    .profile-image-side a {
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .profile-links {
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+}
+
+  .publication-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: left;
+    margin: 0 auto;
+  }
+
+  .publications-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .publication-card {
+    background-color: rgba(30, 100, 200 ,0.1);
+    border-radius: 16px;
+    border: rgb(30, 100, 200);
+    box-shadow: 0 2px 8px rgba(30, 100, 200 ,0.5);
+    padding: 10px;
+    width: 240px;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .publication-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 200, 0 ,0.5);
+    background-color: rgba(0, 200, 0 ,0.2);
+  }
+
+  .publication-card img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 0;
+  }
+
+  .publication-card a h3 {
+    min-height: 7em;
+    margin: 10px 0 5px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .publication-card .publication-date {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+
+  .publication-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+</style>
+
+
+<div class="profile-container">
+  <div class="profile-image-side">
+    <img src="/static/people/arne.jpg" alt="Arne Deloose">
+    <div class="profile-name">Arne Deloose</div>
+    <div class="profile-role">Ph.D. Student</div>
+    
+      <div><a href="https://kermit.ugent.be/phd.php?author=A.%20Deloose" target="_blank" class="profile">Ghent University (UGent)</a></div>
+    
+    <div class="profile-links">
+      <a href="mailto:arne.deloose@ugent.be"><img src="/static/icons/emailPeople.png" alt="email"></a>
+      <a href="https://www.linkedin.com/in/arne-deloose-7b6378228" target="_blank"><img src="/static/icons/linkedin.png" alt="linkedin"></a>
+      
+      <a href="https://github.com/ArneDeloose" target="_blank"><img src="/static/icons/github.png" alt="github"></a>
+      
+        
+          <a href="/static/people/arne_cv.pdf" target="_blank"><img src="/static/icons/cv.png" alt="cv"></a>
+        
+      
+      
+    </div>
+  </div>
+
+  <div class="profile-main-content">
+    <div class="profile-description">
+      <b> Arne Deloose </b> is a PhD student in Bioscience Engineering with a strong background in environmental technologies, data analysis and natural language processing. His current research involves extracting structured knowledge from unstructured natural language texts using techniques such as knowledge graph construction.
+    </div>
+
+    <div class="profile-sections">
+      
+      <div class="section-box">
+        <h3>Interests</h3>
+        <ul>
+          
+            <li>Natural Language Processing (NLP)</li>
+          
+            <li>Textual Data Analysis</li>
+          
+            <li>Knowledge Graph Construction</li>
+          
+            <li>Topic Clustering</li>
+          
+            <li>Query Systems</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="section-box-education">
+        <h3>Education</h3>
+        <ul>
+          
+            
+            
+              <li>
+                <strong>PhD in Bioscience Engineering - Environmental technology</strong>,
+                <span style="color: rgb(30, 100, 200);; font-size: 18px; font-family: sans-serif">2019 - Ongoing</span><br>
+                <span style="color: gray; font-size: 18px; font-family: sans-serif">Ghent University (UGent)</span>
+              </li>
+            
+          
+            
+            
+              <li>
+                <strong>BSc &amp; MSc in Bioscience Engineering - Environmental Technology</strong>,
+                <span style="color: rgb(30, 100, 200);; font-size: 18px; font-family: sans-serif">2013 - 2019</span><br>
+                <span style="color: gray; font-size: 18px; font-family: sans-serif">Ghent University (UGent)</span>
+              </li>
+            
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    
+      <h2 class="publications-title">Publications</h2>
+      <div class="publication-grid">
+        
+        <div class="publication-card">
+          <a href="/publication/Arne_01_2023/">
+            <img src="/static/publication/Arne_01_2023.jpg" alt="Image">
+            <h3>Combining natural language processing and multidimensional classifiers to predict and correct CMMS metadata</h3>
+            <p class="publication-date">Arne Deloose, Glenn Gysels, Bernard De Baets, Jan Verwaeren</p>
+          </a>
+        </div>
+        
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

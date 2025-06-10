@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+  .page-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .page-container .publication-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .page-container .publication-authors{
+    font-size: 21px;
+    color: rgb(30, 100, 200);;
+    margin-bottom: 30px;
+  }
+
+  .page-container h2,
+  .page-container .publication-authors,
+  .page-container .publication-date {
+    text-align: center;
+    margin: 25px;
+  }
+  .publication-date {
+    font-size: 18px;
+  }
+  .page-container .button-container {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .page-container .button {
+    padding: 10px 20px;
+    background-color: rgb(30, 100, 200);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .page-container .publication-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-container .publication-abstract {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+</style>
+
+
+<div class="page-container">
+  <h2 class="publication-title">Predicting the hydrodynamic properties of a bioreactor: Conditional density estimation as a surrogate model for CFD simulations</h2>
+  <p class="publication-authors"><strong>Umut Kaya, Srikanth Gopireddy, Nora Urbanetz, Ingmar Nopens, Jan Verwaeren</strong></p>
+  <p class="publication-date">March 31, 2022</p>
+
+  <img src="/static/publication/Umut_03_2022.jpg"
+       alt="Publication Image"
+       class="publication-image">
+
+  <div class="button-container">
+    
+    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0263876222001502"
+       class="button"
+       target="_blank">
+       📄 Paper
+    </a>
+  </div>
+
+  <p class="publication-abstract">The rising quantity and quality demands in biopharmaceutical manufacturing require a deep understanding of the underlying bioprocesses. For this purpose, computational fluid dynamics (CFD) simulations are typically used to predict the hydrodynamics properties of a bioreactor, offering a toolset for process design. However, CFD approaches are computationally demanding and therefore often restricted to a small set of input parameters. Basic regression techniques can be used to predict the hydrodynamic properties for new input parameter values, but these surrogate models are only capable of interpolating simple statistics such as the mean or maximum of the CFD simulation results. We propose a novel approach that allows to interpolate the volume-averaged distributions of a hydrodynamic property instead of only a simple statistic. In doing so, we (i) obtain a computationally tractable model (ii) that is less expressive than a CFD simulation but more expressive than a basic regression model. The proposed approach has been applied to model the hydrodynamic stress and Kolmogorov length scale distributions using a CFD model of a sparged and stirred bioreactor. However, the methodology is generic and can be applied to further geometries and parameters.</p>
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

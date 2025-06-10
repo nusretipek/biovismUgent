@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fdfdfd;
+    }
+    .not-found-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 0 40px;
+      gap: 40px;
+    }
+    .not-found-text {
+      max-width: 500px;
+    }
+    .not-found-text h1 {
+      font-size: 64px;
+      margin-bottom: 10px;
+      color: #c0392b;
+    }
+    .not-found-text h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #c0392b;
+    }
+    .not-found-text p {
+      font-size: 16px;
+      color: #333;
+    }
+    .not-found-text a {
+      color: #1e64c8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .not-found-icon img {
+      width: 300px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="not-found-container">
+    <div class="not-found-text">
+      <h1>Oops.</h1>
+      <h2>We can't find the page you are looking for.</h2>
+      <p>
+        It may have expired or there could be a typo.<br>
+        Maybe you can find what you need from our <a href="/">homepage</a>.
+      </p>
+    </div>
+    <div class="not-found-icon">
+      <img src="/static/icons/404.png" alt="404 Icon">
+    </div>
+  </div>
+</body>
+</html>

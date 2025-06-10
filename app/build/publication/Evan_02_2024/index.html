@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+  .page-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .page-container .publication-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .page-container .publication-authors{
+    font-size: 21px;
+    color: rgb(30, 100, 200);;
+    margin-bottom: 30px;
+  }
+
+  .page-container h2,
+  .page-container .publication-authors,
+  .page-container .publication-date {
+    text-align: center;
+    margin: 25px;
+  }
+  .publication-date {
+    font-size: 18px;
+  }
+  .page-container .button-container {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .page-container .button {
+    padding: 10px 20px;
+    background-color: rgb(30, 100, 200);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .page-container .publication-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-container .publication-abstract {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+</style>
+
+
+<div class="page-container">
+  <h2 class="publication-title">Bayesian cell therapy process optimization</h2>
+  <p class="publication-authors"><strong>Evan Claes, Tommy Heck, Kathleen Coddens, Maarten Sonnaert, Jan Schrooten, Jan Verwaeren</strong></p>
+  <p class="publication-date">February 19, 2024</p>
+
+  <img src="/static/publication/Evan_02_2024.jpg"
+       alt="Publication Image"
+       class="publication-image">
+
+  <div class="button-container">
+    
+    <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/abs/10.1002/bit.28669"
+       class="button"
+       target="_blank">
+       📄 Paper
+    </a>
+  </div>
+
+  <p class="publication-abstract">Optimizing complex bioprocesses poses a significant challenge in several fields, particularly in cell therapy manufacturing. The development of customized, closed, and automated processes is crucial for their industrial translation and for addressing large patient populations at a sustainable price. Limited understanding of the underlying biological mechanisms, coupled with highly resource-intensive experimentation, are two contributing factors that make the development of these next-generation processes challenging. Bayesian optimization (BO) is an iterative experimental design methodology that addresses these challenges, but has not been extensively tested in situations that require parallel experimentation with significant experimental variability. In this study, we present an evaluation of noisy, parallel BO for increasing noise levels and parallel batch sizes on two in silico bioprocesses, and compare it to the industry state-of-the-art. As an in vitro showcase, we apply the method to the optimization of a monocyte purification unit operation. The in silico results show that BO significantly outperforms the state-of-the-art, requiring approximately 50% fewer experiments on average. This study highlights the potential of noisy, parallel BO as valuable tool for cell therapy process development and optimization.</p>
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+  .page-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .page-container .publication-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .page-container .publication-authors{
+    font-size: 21px;
+    color: rgb(30, 100, 200);;
+    margin-bottom: 30px;
+  }
+
+  .page-container h2,
+  .page-container .publication-authors,
+  .page-container .publication-date {
+    text-align: center;
+    margin: 25px;
+  }
+  .publication-date {
+    font-size: 18px;
+  }
+  .page-container .button-container {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .page-container .button {
+    padding: 10px 20px;
+    background-color: rgb(30, 100, 200);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .page-container .publication-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-container .publication-abstract {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+</style>
+
+
+<div class="page-container">
+  <h2 class="publication-title">Data-driven prediction of dairy cattle lifetime production and its use as a guideline to select surplus youngstock</h2>
+  <p class="publication-authors"><strong>Maarten Perneel, Stefaan De Smet, Jan Verwaeren</strong></p>
+  <p class="publication-date">February 07, 2024</p>
+
+  <img src="/static/publication/Maarten_02_2024.jpg"
+       alt="Publication Image"
+       class="publication-image">
+
+  <div class="button-container">
+    
+    <a href="https://www.sciencedirect.com/science/article/pii/S0022030224000699"
+       class="button"
+       target="_blank">
+       📄 Paper
+    </a>
+  </div>
+
+  <p class="publication-abstract">The lifetime production of dairy cows is a complex trait influenced not only by genetics but also by the environment in which a cow lives and the management practices of the farmer. Moreover, these influential factors show complex interactions with each other, making it difficult to reliably predict the lifetime production of individual animals at birth. However, because well-managed dairy farms often have a surplus of youngstock, reliable lifetime production predictions would offer the opportunity to make more substantiated decisions when selecting calves or heifers to sell. Therefore, using data from Dutch herds, we constructed a dataset capturing information on genetics, environment, and management practices to develop multiple machine learning models capable of predicting the lifetime production of dairy cattle soon after birth. We found that a coupling of trends observed at the country level with farm-specific models largely outperforms off-the-shelf approaches. At birth, our best model could explain up to 47% of the variance in lifetime production, a considerable improvement compared with linear regression on the breeding values supplemented with the average lifetime production at farm level, which could explain only 21.7% of the variance in lifetime production. Moreover, we demonstrated that surplus youngstock selection according to our model could more than double the surplus animal selection effect compared with the benchmark methodology, offering opportunities to significantly increase the average (future) potential lifetime production of the retained heifers. Assuming a static 20% surplus liveborn heifer scenario and random surplus animal selection as the default, our best model for surplus animal selection resulted in a 9.4% greater lifetime production in the retained animals compared with the current Dutch average lifetime production.</p>
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

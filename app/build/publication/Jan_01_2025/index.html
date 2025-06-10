@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+  .page-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .page-container .publication-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .page-container .publication-authors{
+    font-size: 21px;
+    color: rgb(30, 100, 200);;
+    margin-bottom: 30px;
+  }
+
+  .page-container h2,
+  .page-container .publication-authors,
+  .page-container .publication-date {
+    text-align: center;
+    margin: 25px;
+  }
+  .publication-date {
+    font-size: 18px;
+  }
+  .page-container .button-container {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .page-container .button {
+    padding: 10px 20px;
+    background-color: rgb(30, 100, 200);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .page-container .publication-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-container .publication-abstract {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+</style>
+
+
+<div class="page-container">
+  <h2 class="publication-title">Advanced wood species identification based on multiple anatomical sections and using deep feature transfer and fusion</h2>
+  <p class="publication-authors"><strong>Kallil M Zielinski, Leonardo Scabini, Lucas C Ribas, Núbia R da Silva, Hans Beeckman, Jan Verwaeren, Odemir M Bruno, Bernard De Baets</strong></p>
+  <p class="publication-date">January 20, 2025</p>
+
+  <img src="/static/publication/Jan_01_2025.jpg"
+       alt="Publication Image"
+       class="publication-image">
+
+  <div class="button-container">
+    
+    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168169924012584"
+       class="button"
+       target="_blank">
+       📄 Paper
+    </a>
+  </div>
+
+  <p class="publication-abstract">Wood is a versatile and renewable resource, widely used across industries, yet the increasing demand has led to illegal logging with severe environmental, social, and economic consequences. To reduce illegal wood trade and its associated threats to biodiversity, robust methods for wood species identification and accurate datasets are crucial. In recent years, there have been significant advances in this area, but many current techniques face challenges such as high costs, the need for skilled experts for data interpretation, and the lack of good datasets for professional reference. Therefore, most of these methods, and certainly the wood anatomical assessment, may benefit from tools based on Artificial Intelligence. In this paper, we apply two transfer learning techniques with Convolutional Neural Networks (CNNs) to a multi-view Congolese wood species dataset including sections from different orientations and viewed at different microscopic magnifications. We explore two feature extraction methods in detail, namely Global Average Pooling (GAP) and Random Encoding of Aggregated Deep Activation Maps (RADAM), for efficient and accurate wood species identification. Our results indicate superior accuracy on diverse datasets and anatomical sections, surpassing the results of other methods. Our proposal represents a significant advancement in wood species identification, offering a robust tool to support the conservation of forest ecosystems and promote sustainable forestry practices.</p>
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

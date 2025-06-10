@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="active">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+.research-section {
+    background-color: #ffffff;
+    padding: 0 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.research-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.research-card {
+    background-color: rgba(255, 255, 255 ,0.3);
+    border-radius: 16px;
+    border: rgb(30, 100, 200);
+    box-shadow: 0 2px 8px rgba(30, 100, 200 ,0.5);
+    padding: 10px;
+    width: 300px;
+    text-align: left;
+    max-width: 100%;
+}
+
+.research-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 200, 0, 0.5);
+    background-color: rgba(0, 200, 0 ,0.2);
+}
+
+.research-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.research-card a h3 {
+    min-height: 3.8em;
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.research-card .research-date {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.research-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.research-section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+    color: rgb(30, 100, 200);
+}
+
+@media (max-width: 1024px) {
+    .research-grid {
+        margin-left: 0;
+        padding: 20px 10px;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .research-card {
+        flex: 1 1 100%;
+        max-width: 90vw;
+        box-sizing: border-box;
+    }
+
+    .research-card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+</style>
+
+
+<div class="research-section">
+
+  <h2 class="research-section-title">Computer Vision for Animal Sciences</h2>
+  <div class="research-grid">
+    
+    <div class="research-card">
+      <a href="/research/CVAS_01/">
+        <img src="/static/icons/maarten.png" alt="Video Analysis and Machine Learning for Monitoring Dairy Cow Behaviour, both in Indoor and Pasture Conditions">
+        <h3>Monitoring Dairy Cow Behaviour with Video and AI</h3>
+      </a>
+    </div>
+    
+    <div class="research-card">
+      <a href="/research/CVAS_02/">
+        <img src="/static/icons/ines.png" alt="Integration of Expert Knowledge in Time Series Analytics as a Leverage for Improved Monitoring and Decision Support in Complex Agricultural Systems">
+        <h3>Expert Knowledge in Agricultural Time Series Analytics</h3>
+      </a>
+    </div>
+    
+    <div class="research-card">
+      <a href="/research/CVAS_03/">
+        <img src="/static/icons/nusret.png" alt="Algorithmic Automated Behaviour Detection of Caged-animals Using Computer Vision">
+        <h3>Computer Vision for Caged-Animal Behaviour Detection</h3>
+      </a>
+    </div>
+    
+  </div>
+
+  <h2 class="research-section-title">Hybrid Modelling for Biological Sciences</h2>
+  <div class="research-grid">
+    
+    <div class="research-card">
+      <a href="/research/HM_01/">
+        <img src="/static/icons/evan.png" alt="Analytical Quality-by-Design and hybrid modelling - Enabling technologies for ATMP manufacturing">
+        <h3>Hybrid Modelling for ATMP Manufacturing</h3>
+      </a>
+    </div>
+    
+    <div class="research-card">
+      <a href="/research/HM_02/">
+        <img src="/static/icons/umut.png" alt="Surrogate Modeling of CFD Simulation of Bio-processes Using Machine Learning">
+        <h3>Surrogate Models for CFD Bio-processes</h3>
+      </a>
+    </div>
+    
+    <div class="research-card">
+      <a href="/research/HM_03/">
+        <img src="/static/icons/manuel.png" alt="Mathematical Optimization of Tablet Formulations">
+        <h3>Mathematical Optimization of Tablet Formulations</h3>
+      </a>
+    </div>
+    
+    <div class="research-card">
+      <a href="/research/HM_04/">
+        <img src="/static/icons/mutlu.png" alt="Hybrid Modelling of Surface Water Systems Using Online Sensor Data">
+        <h3>Hybrid Modelling of Surface Water Systems</h3>
+      </a>
+    </div>
+    
+    <div class="research-card">
+      <a href="/research/HM_05/">
+        <img src="/static/icons/loes.png" alt="Hybrid Modelling of Wastewater Treatment Processes">
+        <h3>Hybrid Modelling of Wastewater Treatment Processes</h3>
+      </a>
+    </div>
+    
+  </div>
+
+  <h2 class="research-section-title">Multi-modal Data Analysis for Environmental Sciences</h2>
+  <div class="research-grid">
+    
+    <div class="research-card">
+      <a href="/research/MM_01/">
+        <img src="/static/icons/arne.png" alt="Automated Knowledge Extraction From Maintenance Reports and Popular Texts on Nature Conservation">
+        <h3>Automated Knowledge Extraction from Texts</h3>
+      </a>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>

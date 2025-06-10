@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+
+  .people-section {
+    padding: 0 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .role-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: rgb(30, 100, 200);
+  }
+
+  .people-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .person-card {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    background: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .person-card:hover {
+    box-shadow: 0 2px 16px rgba(0, 200, 0 ,0.5);
+  }
+
+  .person-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .person-card h3 {
+    margin: 10px 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+  }
+
+  .person-role {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  .person-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    z-index: 2;
+  }
+
+  .person-icons a {
+    display: inline-flex;
+    padding: 3px;
+    transition: background-color 0.2s;
+  }
+
+  .person-icons img {
+    width: 25px;
+    height: 25px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-indent: -9999px;
+    z-index: 1;
+  }
+
+</style>
+
+
+<div class="people-section">
+  {% for role in roles %}
+    {% if groupedPeople[role] %}
+      <h2 class="role-title">{{ role }}</h2>
+      <div class="people-grid">
+        {% for person in groupedPeople[role] %}
+          <div class="person-card">
+            <a href="{{ url_for('personDetail', slug=person.slug) }}" class="card-overlay"></a>
+            <img src="{{ url_for('static', filename='people/' ~ person.image) }}" alt="{{ person.name }}">
+            <h3>{{ person.name }}</h3>
+            <div class="person-role">{{ person.role }}</div>
+            <div class="person-icons">
+              {% if person.email %}<a href="mailto:{{ person.email }}"><img src="{{ url_for('static', filename='icons/emailPeople.png') }}"></a>{% endif %}
+              {% if person.linkedin %}<a href="{{ person.linkedin }}" target="_blank"><img src="{{ url_for('static', filename='icons/linkedin.png') }}"></a>{% endif %}
+              {% if person.github %}<a href="{{ person.github }}" target="_blank"><img src="{{ url_for('static', filename='icons/github.png') }}"></a>{% endif %}
+              {% if person.googleScholar %}<a href="{{ person.googleScholar }}" target="_blank"><img src="{{ url_for('static', filename='icons/googleScholar.png') }}"></a>{% endif %}
+              {% if person.cv %}
+                {% if person.cv.startswith('http://') or person.cv.startswith('https://') %}
+                  <a href="{{ person.cv }}" target="_blank">
+                    <img src="{{ url_for('static', filename='icons/cv.png') }}" alt="CV">
+                  </a>
+                {% else %}
+                  <a href="{{ url_for('static', filename='people/' ~ person.cv) }}" target="_blank">
+                    <img src="{{ url_for('static', filename='icons/cv.png') }}" alt="CV">
+                  </a>
+                {% endif %}
+              {% endif %}
+              {% if person.website %}<a href="{{ person.website }}" target="_blank"><img src="{{ url_for('static', filename='icons/website.png') }}"></a>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+
+{% endblock %}

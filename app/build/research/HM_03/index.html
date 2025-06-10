@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-594DT48QFE');
+        </script>
+
+        <title>Biovism Lab</title>
+        <link rel="icon" type="image/svg+xml" href="/static/logo.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-inner">
+                <a href="/">
+                    <img src="/static/logo.svg" alt="Biovism Logo" class="logo">
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav class="nav-links" id="navbarMenu">
+                    <a href="/" class="">Home</a>
+                    <a href="/people/" class="">People</a>
+                    <a href="/research/" class="">Research</a>
+                    <a href="/publications/" class="">Publications</a>
+                    <a href="/news/" class="">News</a>
+                    <a href="/join/" class="">Join Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+
+
+<style>
+
+    .research-wrapper {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .research-title {
+        text-align: justify;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+    }
+
+    .description-title {
+        font-size: 21px;
+        color: rgb(30, 100, 200);
+        margin-bottom: 30px;
+    }
+
+    .publications-title {
+        font-size: 21px;
+        color: rgb(30, 100, 200);
+        margin-bottom: 30px;
+    }
+    .researcher-title {
+        font-size: 21px;
+        color: rgb(30, 100, 200);
+        margin-bottom: 30px;
+    }
+
+    .research-description {
+        font-size: 18px;
+        text-align: justify;
+        line-height: 1.6;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+    }
+
+
+    .publication-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: left;
+        margin: 0 auto;
+    }
+
+    .publication-card {
+        background-color: rgba(30, 100, 200 ,0.1);
+        border-radius: 16px;
+        border: rgb(30, 100, 200);
+        box-shadow: 0 2px 8px rgba(30, 100, 200 ,0.5);
+        padding: 10px;
+        width: 240px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .publication-card:hover {
+        box-shadow: 0 2px 8px rgba(0, 200, 0 ,0.5);
+        background-color: rgba(0, 200, 0 ,0.2);
+    }
+
+    .publication-card img {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    .publication-card a h3 {
+        min-height: 7em;
+        margin: 10px 0 5px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .publication-card .publication-date {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+        margin: 10px 0 5px;
+    }
+
+    .publication-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    @media (max-width: 1024px) {
+        .publication-grid {
+            margin-left: 0;
+            padding: 20px 10px;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .publication-card {
+            flex: 1 1 100%;
+            max-width: 90vw;
+            box-sizing: border-box;
+        }
+
+        .publication-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .people-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 30px;
+    }
+
+    .person-card {
+        position: relative;
+        width: 250px;
+        text-align: center;
+        background: #fff;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .person-card:hover {
+        box-shadow: 0 2px 16px rgba(0, 200, 0 ,0.5);
+    }
+
+    .person-card img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .person-card h3 {
+        margin: 10px 0 10px;
+        font-size: 18px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: sans-serif;
+    }
+
+    .person-role {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 10px;
+    }
+
+    .person-icons {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        z-index: 2;
+    }
+
+    .person-icons a {
+        display: inline-flex;
+        padding: 3px;
+        transition: background-color 0.2s;
+    }
+
+    .person-icons img {
+        width: 25px;
+        height: 25px;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+        object-fit: contain;
+    }
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-indent: -9999px;
+        z-index: 1;
+    }
+
+
+</style>
+
+
+<div class="research-wrapper">
+    <h1 class="research-title">Mathematical Optimization of Tablet Formulations</h1>
+    <h2 class="description-title">Description</h2>
+    <div class="research-description">
+        During development of new drug products, both the formulation and production process need to be optimized to achieve robust performance and deliver a final drug product that meets a series of critical quality attributes (CQAs). Formulation development is in many cases based on the formulator’s experience by means of trial-and-error which can potentially lead to increased experimental workload which induces additional costs and delayed time-to-market. This project aims to implement machine learning techniques into the drug development process to guide the experimentation during drug development which can lead to a reduction of the number of experiments that is needed to obtain a successful final drug product.
+    </div>
+
+    <h2 class="researcher-title">Researchers</h2>
+    <div class="people-grid">
+        
+        <div class="person-card">
+            <a href="/people/manuel-borja-lopez-pelaez/" class="card-overlay"></a>
+            <img src="/static/people/manuel.jpg" alt="Manuel Borja Lopez Pelaez">
+            <h3>Manuel Borja Lopez Pelaez</h3>
+            <div class="person-role">Ph.D. Student</div>
+            <div class="person-icons">
+                <a href="mailto:Manuel.BorjaLopezPelaez@UGent.be"><img src="/static/icons/emailPeople.png"></a>
+                <a href="https://www.linkedin.com/in/manuel-borja-lopez-pelaez-2a7430134" target="_blank"><img src="/static/icons/linkedin.png"></a>
+                
+                
+                
+                
+                <a href="/static/People/manuel_cv.pdf" target="_blank">
+                    <img src="/static/icons/cv.png" alt="CV">
+                </a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="person-card">
+            <a href="/people/jan-verwaeren/" class="card-overlay"></a>
+            <img src="/static/people/jan.jpg" alt="Jan Verwaeren">
+            <h3>Jan Verwaeren</h3>
+            <div class="person-role">Assistant Professor</div>
+            <div class="person-icons">
+                <a href="mailto:jan.verwaeren@ugent.be"><img src="/static/icons/emailPeople.png"></a>
+                <a href="https://www.linkedin.com/in/janverwaeren" target="_blank"><img src="/static/icons/linkedin.png"></a>
+                <a href="https://github.com/jverwaer" target="_blank"><img src="/static/icons/github.png"></a>
+                <a href="https://scholar.google.com/citations?user=tK68zYoAAAAJ&amp;hl=en" target="_blank"><img src="/static/icons/googleScholar.png"></a>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <h2 class="publications-title">Publications</h2>
+    <div class="publication-grid">
+      
+      <div class="publication-card">
+        <a href="/publication/Manuel_12_2024/">
+          <img src="/static/publication/Manuel_12_2024.jpg" alt="Image">
+          <h3>Modelling the effect of base component properties and processing conditions on mixture products using probabilistic, knowledge-guided neural networks</h3>
+          <p class="publication-date">Manuel Borja, Jens Dhondt, Johny Bertels, Daan Van Hauwermeiren, Jan Verwaeren</p>
+        </a>
+      </div>
+      
+    </div>
+
+</div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 UGent Biovism Lab</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbarMenu');
+                menu.classList.toggle('show');
+            }
+        </script>
+    </body>
+
+</html>
