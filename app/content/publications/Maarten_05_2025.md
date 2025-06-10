@@ -1,7 +1,0 @@
-title: Dynamic Multi-Behaviour, Orientation-Invariant Re-Identification of Holstein-Friesian Cattle
-authors: Maarten Perneel, Ines Adriaens, Jan Verwaeren, Ben Aernouts
-date: 2025-05-08
-year: 2025
-pdf: https://www.mdpi.com/1424-8220/25/10/2971
-image: Maarten_05_2025.jpg
-abstract: To perform reliable animal re-identification, most available algorithms require standardised animal poses. However, this lack of versatility prevents widespread application of these algorithms in behavioural research and commercial environments. To circumvent this, we incorporated information about the orientation and behaviour of the animals in an embedding-based algorithm to re-identify Holstein-Friesian cattle. After all, the orientation and behaviour of an animal determine which body parts of an animal are visible from the camera’s perspective. We evaluated our approach using a dataset with more than 11,000 instance segments of Holstein-Friesian cattle, but our methodology is readily generalisable to different animal species. Our results show that incorporation of informative metadata parameters in the re-identification procedure increases the rank-1 re-identification accuracy from 0.822 to 0.894, corresponding to a 40% reduction in the number of incorrectly identified animals.
