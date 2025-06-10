@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+
+    .research-wrapper {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .research-title {
+        text-align: justify;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+    }
+
+    .description-title {
+        font-size: 21px;
+        color: rgb(30, 100, 200);
+        margin-bottom: 30px;
+    }
+
+    .publications-title {
+        font-size: 21px;
+        color: rgb(30, 100, 200);
+        margin-bottom: 30px;
+    }
+    .researcher-title {
+        font-size: 21px;
+        color: rgb(30, 100, 200);
+        margin-bottom: 30px;
+    }
+
+    .research-description {
+        font-size: 18px;
+        text-align: justify;
+        line-height: 1.6;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+    }
+
+
+    .publication-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: left;
+        margin: 0 auto;
+    }
+
+    .publication-card {
+        background-color: rgba(30, 100, 200 ,0.1);
+        border-radius: 16px;
+        border: rgb(30, 100, 200);
+        box-shadow: 0 2px 8px rgba(30, 100, 200 ,0.5);
+        padding: 10px;
+        width: 240px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .publication-card:hover {
+        box-shadow: 0 2px 8px rgba(0, 200, 0 ,0.5);
+        background-color: rgba(0, 200, 0 ,0.2);
+    }
+
+    .publication-card img {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    .publication-card a h3 {
+        min-height: 7em;
+        margin: 10px 0 5px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .publication-card .publication-date {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+        margin: 10px 0 5px;
+    }
+
+    .publication-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    @media (max-width: 1024px) {
+        .publication-grid {
+            margin-left: 0;
+            padding: 20px 10px;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .publication-card {
+            flex: 1 1 100%;
+            max-width: 90vw;
+            box-sizing: border-box;
+        }
+
+        .publication-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .people-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 30px;
+    }
+
+    .person-card {
+        position: relative;
+        width: 250px;
+        text-align: center;
+        background: #fff;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .person-card:hover {
+        box-shadow: 0 2px 16px rgba(0, 200, 0 ,0.5);
+    }
+
+    .person-card img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .person-card h3 {
+        margin: 10px 0 10px;
+        font-size: 18px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: sans-serif;
+    }
+
+    .person-role {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 10px;
+    }
+
+    .person-icons {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        z-index: 2;
+    }
+
+    .person-icons a {
+        display: inline-flex;
+        padding: 3px;
+        transition: background-color 0.2s;
+    }
+
+    .person-icons img {
+        width: 25px;
+        height: 25px;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+        object-fit: contain;
+    }
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-indent: -9999px;
+        z-index: 1;
+    }
+
+
+</style>
+
+
+<div class="research-wrapper">
+    <h1 class="research-title">{{ item.title }}</h1>
+    <h2 class="description-title">Description</h2>
+    <div class="research-description">
+        {{ item.description | safe }}
+    </div>
+
+    <h2 class="researcher-title">Researchers</h2>
+    <div class="people-grid">
+        {% for person in researchers %}
+        <div class="person-card">
+            <a href="{{ url_for('personDetail', slug=person.slug) }}" class="card-overlay"></a>
+            <img src="{{ url_for('static', filename='people/' ~ person.image) }}" alt="{{ person.name }}">
+            <h3>{{ person.name }}</h3>
+            <div class="person-role">{{ person.role }}</div>
+            <div class="person-icons">
+                {% if person.email %}<a href="mailto:{{ person.email }}"><img src="{{ url_for('static', filename='icons/emailPeople.png') }}"></a>{% endif %}
+                {% if person.linkedin %}<a href="{{ person.linkedin }}" target="_blank"><img src="{{ url_for('static', filename='icons/linkedin.png') }}"></a>{% endif %}
+                {% if person.github %}<a href="{{ person.github }}" target="_blank"><img src="{{ url_for('static', filename='icons/github.png') }}"></a>{% endif %}
+                {% if person.googleScholar %}<a href="{{ person.googleScholar }}" target="_blank"><img src="{{ url_for('static', filename='icons/googleScholar.png') }}"></a>{% endif %}
+                {% if person.cv %}
+                {% if person.cv.startswith('http://') or person.cv.startswith('https://') %}
+                <a href="{{ person.cv }}" target="_blank">
+                    <img src="{{ url_for('static', filename='icons/cv.png') }}" alt="CV">
+                </a>
+                {% else %}
+                <a href="{{ url_for('static', filename='People/' ~ person.cv) }}" target="_blank">
+                    <img src="{{ url_for('static', filename='icons/cv.png') }}" alt="CV">
+                </a>
+                {% endif %}
+                {% endif %}
+                {% if person.website %}<a href="{{ person.website }}" target="_blank"><img src="{{ url_for('static', filename='icons/website.png') }}"></a>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="publications-title">Publications</h2>
+    <div class="publication-grid">
+      {% for pub in publications %}
+      <div class="publication-card">
+        <a href="{{ url_for('showPublication', slug=pub.slug) }}">
+          <img src="{{ url_for('static', filename='publication/' + pub.image) }}" alt="Image">
+          <h3>{{ pub.title }}</h3>
+          <p class="publication-date">{{ pub.authors }}</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+</div>
+
+
+{% endblock %}
