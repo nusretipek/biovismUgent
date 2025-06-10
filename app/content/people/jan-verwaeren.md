@@ -9,7 +9,7 @@ email: jan.verwaeren@ugent.be
 googleScholar: https://scholar.google.com/citations?user=tK68zYoAAAAJ&hl=en
 github: https://github.com/jverwaer
 cv:
-website: 
+website:
 interests: ["Computer vision", "Machine learning", "Mathematical modeling"]
 degrees: ["BSc in Bioscience Engineering, Ghent University (UGent), 2005", "MSc in Bioscience Engineering, Ghent University (UGent), 2007", "PhD in Bioscience Engineering, Ghent University (UGent), 2014"]
 publications: ["Maarten_05_2025", "Maarten_05_2025_2", "Quentin_01_2025", "Jan_01_2025", "Manuel_12_2024", "Quentin_08_2024", "Nusret_06_2024", "Loes_05_2024", "Evan_02_2024", "Maarten_02_2024", "Nusret_08_2023", "Arne_01_2023", "Jan_07_2022", "Umut_03_2022", "Jan_03_2022", "Jan_01_2022", "Jan_05_2021"]
