@@ -6,20 +6,22 @@
 <style>
 
   .welcome-wrapper {
-    max-width: 1250px;
+    #max-width: 1250px;
     margin: 0 auto;
     padding: 30px 10px;
     text-align: center;
+    max-width: 65%;
   }
 
   .welcome-title {
     color: rgb(49, 49, 49);
-    font-size: 47px;
+    #font-size: 47px;
     font-weight: 400;
     margin-top: -30px;
     margin-bottom: 10px;
-    margin-left: -250px;
+    margin-left: -220px;
     font-family: 'lato', sans-serif;
+    font-size: clamp(38px, 1.8vw, 47px);
   }
 
   .welcome-content {
@@ -58,6 +60,7 @@
   .welcome-text p {
     margin: 0 0 20px 0;
     text-align: justify;
+    font-size: clamp(15px, 1.8vw, 19px);
     text-justify: inter-word;
   }
 
@@ -66,9 +69,60 @@
     color: rgb(30, 100, 200);
   }
 
-  @media (max-width: 1680px) {
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lightbox:target {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid white;
+    box-shadow: 0 0 10px black;
+  }
+
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+  }
+  @media (max-width: 1250px) {
+    .group-photo {
+      width: 380px;
+      height: auto;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+
+    .icon {
+      width: 180px;
+      height: 150px;
+      flex-shrink: 0;
+      margin-bottom: 25px;
+    }
+
+    .welcome-title {
+      margin-left: -190px;
+    }
+  }
+
+  @media (max-width: 1024px) {
     .welcome-wrapper {
       padding: 20px 10px;
+      max-width: 100%;
     }
 
     .welcome-title {
@@ -91,10 +145,18 @@
       padding: 0 10px;
     }
 
-    .group-photo,
+    .group-photo {
+      margin-top: -10px;
+      width: 80%;
+      max-width: 100%;
+      height: auto;
+    }
+
+
     .icon {
       width: 80%;
-      max-width: 300px;
+      padding-top: 40px;
+      max-width: 180px;
       height: auto;
     }
   }
@@ -121,7 +183,13 @@
         pharmaceutical and environmental sciences.
       </p>
     </div>
-    <img src="{{ url_for('static', filename='groupPhoto.jpg') }}" alt="Biovism Group Photo" class="group-photo">
+    <a href="#popup-group" class="popup-trigger">
+      <img src="{{ url_for('static', filename='groupPhoto.jpg') }}" alt="Biovism Group Photo" class="group-photo">
+    </a>
+    <div id="popup-group" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="{{ url_for('static', filename='groupPhoto.jpg') }}" alt="Group Photo Large">
+    </div>
   </div>
 </div>
 

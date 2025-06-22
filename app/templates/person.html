@@ -162,11 +162,26 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0;
       align-content: center;
       align-items: center;
       gap: 30px;
+
     }
+
+  .section-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .profile-image-side img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
     .profile-image-side {
       flex: 0 0 auto;
       text-align: center;
@@ -247,6 +262,7 @@
     color: inherit;
     display: block;
   }
+
 
 </style>
 
