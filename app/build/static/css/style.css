@@ -1,20 +1,26 @@
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
 
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh; /* 3. Make body AT LEAST full viewport height */
+    min-height: 100vh;
     margin: 0;
     font-family: 'Merriweather', serif;
     background-color: #fff;
     color: #000;
-}
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 
+}
 
 /*Navigation bar*/
 .navbar {
     background-color: white;
     padding: 13px 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -28,7 +34,9 @@ body {
     max-width: 1750px;
     margin: 0 auto;
     position: relative;
-
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 6vw;
 }
 
 .logo {
@@ -39,8 +47,10 @@ body {
 .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
+    flex: 1;
+    justify-content: flex-end;
+    min-width: 0;
+    gap: 30px;
     width: 40%;
     position: relative;
     left: 0;
@@ -54,7 +64,7 @@ body {
     padding: 5px 0;
     transition: color 0.3s ease;
     font-family: sans-serif;
-    color: #555;
+    color: #222;
 }
 
 .nav-links a.active {
@@ -73,7 +83,19 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 1680px) {
+@media (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 1024px) {
     .menu-toggle {
         display: block;
         margin-left: auto;
@@ -82,13 +104,16 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 180px;
+        right: 0;
+        left: auto;
+        text-align: center;
+        align-items: center;
         background-color: white;
         position: absolute;
         top: 60px;
-        left: 0;
         padding: 10px 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
 
@@ -126,7 +151,7 @@ main {
     background-color: white;
     font-size: 14px;
     font-family: sans-serif;
-    color: rgba(0,0,0,0.555);
+    color: #222;
     flex-shrink: 0;
 }
 
@@ -152,9 +177,9 @@ main {
     background-color: white;
     border-radius: 16px;
     border: rgb(30, 100, 200);
-    box-shadow: 0 2px 8px rgba(30, 100, 200 ,0.5);
+    box-shadow: 0 2px 8px rgba(30, 100, 200, 0.5);
     padding: 10px;
-    width: 255px;
+    width: 230px;
     text-align: left;
     max-width: 100%;
 }
@@ -170,15 +195,15 @@ main {
 .news-card a h3 {
     min-height: 3.8em;
     margin: 10px 0 5px 0;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
 }
 
 .news-card .news-date {
     font-size: 14px;
-    color: #777;
+    color: #222;
     text-align: center;
-    margin: 10px 0 5px;
+    margin: 10px 0 7px;
 }
 
 .news-item h3,
@@ -198,5 +223,25 @@ main {
 }
 
 .news-card:hover {
-  box-shadow: 0 2px 16px rgba(0, 200, 0 ,0.5);
+    box-shadow: 0 2px 16px rgba(0, 200, 0, 0.5);
+}
+
+@media (min-width: 1350px) {
+    .news-card {
+        background-color: white;
+        border-radius: 16px;
+        border: rgb(30, 100, 200);
+        box-shadow: 0 2px 8px rgba(30, 100, 200, 0.5);
+        padding: 10px;
+        width: 15%;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .news-card a h3 {
+        min-height: 5em;
+        margin: 10px 0 5px 0;
+        font-size: 15px;
+        text-align: center;
+    }
 }

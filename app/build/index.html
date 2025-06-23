@@ -4,6 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Biovism lab at Ghent University focuses on automated information extraction from visual and multi-modal sensors, with applications in life sciences, including computer vision, data fusion, and computational modeling." />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -43,20 +48,22 @@
 <style>
 
   .welcome-wrapper {
-    max-width: 1250px;
+    #max-width: 1250px;
     margin: 0 auto;
     padding: 30px 10px;
     text-align: center;
+    max-width: 65%;
   }
 
   .welcome-title {
     color: rgb(49, 49, 49);
-    font-size: 47px;
+    #font-size: 47px;
     font-weight: 400;
     margin-top: -30px;
     margin-bottom: 10px;
-    margin-left: -250px;
+    margin-left: -220px;
     font-family: 'lato', sans-serif;
+    font-size: clamp(38px, 1.8vw, 47px);
   }
 
   .welcome-content {
@@ -88,24 +95,84 @@
     flex: 0 0 60%;
     font-size: 19px;
     font-family: 'lato', sans-serif;
-    color: rgba(0, 0, 0, 0.80);
+    color: #222;
     line-height: 1.5;
   }
 
   .welcome-text p {
     margin: 0 0 20px 0;
     text-align: justify;
+    font-size: clamp(15px, 1.8vw, 19px);
     text-justify: inter-word;
   }
 
   .welcome-text a {
-    text-decoration: none;
-    color: rgb(30, 100, 200);
+    color: #0055cc;
+    text-decoration: underline;
+    font-weight: 500;
+    text-underline-offset: 2px;
   }
 
-  @media (max-width: 1680px) {
+  .welcome-text a:hover,
+  .welcome-text a:focus {
+    color: #003399;
+    text-decoration: underline;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lightbox:target {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid white;
+    box-shadow: 0 0 10px black;
+  }
+
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+  }
+  @media (max-width: 1250px) {
+    .group-photo {
+      width: 380px;
+      height: auto;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+
+    .icon {
+      width: 180px;
+      height: 150px;
+      flex-shrink: 0;
+      margin-bottom: 25px;
+    }
+
+    .welcome-title {
+      margin-left: -190px;
+    }
+  }
+
+  @media (max-width: 1024px) {
     .welcome-wrapper {
       padding: 20px 10px;
+      max-width: 100%;
     }
 
     .welcome-title {
@@ -128,10 +195,18 @@
       padding: 0 10px;
     }
 
-    .group-photo,
+    .group-photo {
+      margin-top: -10px;
+      width: 80%;
+      max-width: 100%;
+      height: auto;
+    }
+
+
     .icon {
       width: 80%;
-      max-width: 300px;
+      padding-top: 40px;
+      max-width: 180px;
       height: auto;
     }
   }
@@ -147,8 +222,8 @@
       <p>
         The <b>Biovism</b> lab focuses on the automated extraction of information from visual and multi-modal sensors
         and its embedding in computational models, with applications in the life sciences. Biovism is part of the
-        research unit on <a target="_blank" href="https://kermit.ugent.be/">Knowledge-based Systems
-        </a> of the <a target="_blank" href="https://www.ugent.be/bw/en">Faculty of Bioscience Engineering</a> at
+        research unit on <a target="_blank" href="https://kermit.ugent.be/">Knowledge-based Systems</a>
+        of the <a target="_blank" href="https://www.ugent.be/bw/en">Faculty of Bioscience Engineering</a> at
         <a target="_blank" href="https://www.ugent.be/en">Ghent University</a>.
       </p>
       <p>
@@ -158,7 +233,13 @@
         pharmaceutical and environmental sciences.
       </p>
     </div>
-    <img src="/static/groupPhoto.jpg" alt="Biovism Group Photo" class="group-photo">
+    <a href="#popup-group" class="popup-trigger">
+      <img src="/static/groupPhoto.webp" alt="Biovism Group Photo" class="group-photo">
+    </a>
+    <div id="popup-group" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="/static/groupPhoto.webp" alt="Group Photo Large">
+    </div>
   </div>
 </div>
 
@@ -167,7 +248,7 @@
     
     <div class="news-card">
       <a href="/news/24-07-03-Defence-Umut-Kaya/">
-        <img src="/static/news/defenceUmutKaya.jpg" alt="News Image">
+        <img src="/static/news/defenceUmutKaya.webp" alt="News Image">
         <h3>Public PhD Defence: Umut Kaya</h3>
         <p class="news-date">July 03, 2024</p>
       </a>
@@ -175,7 +256,7 @@
     
     <div class="news-card">
       <a href="/news/23-06-09-CVPR/">
-        <img src="/static/news/CVPR.jpg" alt="News Image">
+        <img src="/static/news/CVPR.webp" alt="News Image">
         <h3>Maarten Perneel joins CV4Animals Workshop 2023</h3>
         <p class="news-date">June 09, 2023</p>
       </a>
@@ -191,7 +272,7 @@
     
     <div class="news-card">
       <a href="/news/22-09-01-BOF-Nusret-Ipek/">
-        <img src="/static/news/BOF.png" alt="News Image">
+        <img src="/static/news/BOF.webp" alt="News Image">
         <h3>BOF scholarship for Nusret Ipek</h3>
         <p class="news-date">September 01, 2022</p>
       </a>
@@ -200,7 +281,7 @@
     <div class="news-card">
       <a href="/news/22-07-05-CESPE-event/">
         <img src="/static/news/cespe.png" alt="News Image">
-        <h3>CESPE conference on Manufacturing Innovations for a Sustainable (Bio)Pharmaceutical Industry</h3>
+        <h3>CESPE conference on Manufacturing Innovations for a Sustainable (Bio) Pharmaceutical Industry</h3>
         <p class="news-date">July 05, 2022</p>
       </a>
     </div>

@@ -53,7 +53,7 @@
     flex: 0 0 60%;
     font-size: 19px;
     font-family: 'lato', sans-serif;
-    color: rgba(0, 0, 0, 0.80);
+    color: #222;
     line-height: 1.5;
   }
 
@@ -65,8 +65,16 @@
   }
 
   .welcome-text a {
-    text-decoration: none;
-    color: rgb(30, 100, 200);
+    color: #0055cc;
+    text-decoration: underline;
+    font-weight: 500;
+    text-underline-offset: 2px;
+  }
+
+  .welcome-text a:hover,
+  .welcome-text a:focus {
+    color: #003399;
+    text-decoration: underline;
   }
 
   .lightbox {
@@ -172,8 +180,8 @@
       <p>
         The <b>Biovism</b> lab focuses on the automated extraction of information from visual and multi-modal sensors
         and its embedding in computational models, with applications in the life sciences. Biovism is part of the
-        research unit on <a target="_blank" href="https://kermit.ugent.be/">Knowledge-based Systems
-        </a> of the <a target="_blank" href="https://www.ugent.be/bw/en">Faculty of Bioscience Engineering</a> at
+        research unit on <a target="_blank" href="https://kermit.ugent.be/">Knowledge-based Systems</a>
+        of the <a target="_blank" href="https://www.ugent.be/bw/en">Faculty of Bioscience Engineering</a> at
         <a target="_blank" href="https://www.ugent.be/en">Ghent University</a>.
       </p>
       <p>
@@ -184,11 +192,11 @@
       </p>
     </div>
     <a href="#popup-group" class="popup-trigger">
-      <img src="{{ url_for('static', filename='groupPhoto.jpg') }}" alt="Biovism Group Photo" class="group-photo">
+      <img src="{{ url_for('static', filename='groupPhoto.webp') }}" alt="Biovism Group Photo" class="group-photo">
     </a>
     <div id="popup-group" class="lightbox">
       <a href="#" class="close">&times;</a>
-      <img src="{{ url_for('static', filename='groupPhoto.jpg') }}" alt="Group Photo Large">
+      <img src="{{ url_for('static', filename='groupPhoto.webp') }}" alt="Group Photo Large">
     </div>
   </div>
 </div>

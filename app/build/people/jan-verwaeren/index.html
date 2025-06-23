@@ -4,6 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Biovism lab at Ghent University focuses on automated information extraction from visual and multi-modal sensors, with applications in life sciences, including computer vision, data fusion, and computational modeling." />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-594DT48QFE"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -199,11 +204,26 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0;
       align-content: center;
       align-items: center;
       gap: 30px;
+
     }
+
+  .section-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .profile-image-side img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
     .profile-image-side {
       flex: 0 0 auto;
       text-align: center;
@@ -285,12 +305,13 @@
     display: block;
   }
 
+
 </style>
 
 
 <div class="profile-container">
   <div class="profile-image-side">
-    <img src="/static/people/jan.jpg" alt="Jan Verwaeren">
+    <img src="/static/people/jan.webp" alt="Jan Verwaeren">
     <div class="profile-name">Jan Verwaeren</div>
     <div class="profile-role">Assistant Professor</div>
     
@@ -498,7 +519,7 @@
         
         <div class="publication-card">
           <a href="/publication/Jan_05_2021/">
-            <img src="/static/publication/Jan_05_2021.jpg" alt="Image">
+            <img src="/static/publication/Jan_05_2021.webp" alt="Image">
             <h3>Shifts in the rhizobiome during consecutive in planta enrichment for phosphate-solubilizing bacteria differentially affect maize P status</h3>
             <p class="publication-date">Noémie De Zutter, Maarten Ameye, Jane Debode, Caroline De Tender, Sarah Ommeslag, Jan Verwaeren, Pieter Vermeir, Kris Audenaert, Leen De Gelder</p>
           </a>

@@ -64,7 +64,7 @@ body {
     padding: 5px 0;
     transition: color 0.3s ease;
     font-family: sans-serif;
-    color: #555;
+    color: #222;
 }
 
 .nav-links a.active {
@@ -151,7 +151,7 @@ main {
     background-color: white;
     font-size: 14px;
     font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.555);
+    color: #222;
     flex-shrink: 0;
 }
 
@@ -201,7 +201,7 @@ main {
 
 .news-card .news-date {
     font-size: 14px;
-    color: #777;
+    color: #222;
     text-align: center;
     margin: 10px 0 7px;
 }
