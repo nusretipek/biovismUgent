@@ -1,5 +1,5 @@
 name: Evan Claes
-image: evan.png
+image: evan.webp
 group: Affiliate Staff
 role: Ph.D. Student
 description: <b> Evan Claes </b> is a PhD student in Bioscience Engineering with a strong background in bio-science, data analysis and hybrid modelling. He is affiliated with Antleron NV. His current research focus on analytical Quality-by-Design and hybrid modelling to enable technologies for ATMP manufacturing 4.0.

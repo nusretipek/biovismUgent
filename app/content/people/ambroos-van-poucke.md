@@ -1,5 +1,5 @@
 name: Ambroos Van Poucke
-image: ambroos.jpeg
+image: ambroos.webp
 group: Affiliate Staff
 role: Ph.D. Student
 description: <b> Ambroos Van Poucke </b> obtained his master’s degree in Biochemical Engineering Technology in 2023. He is currently working as a PhD researcher on the Horizon Europe project GOOD. He is involved in developing a method that can automatically identify, classify and map weeds based on high-resolution RGB and multispectral drone imagery.

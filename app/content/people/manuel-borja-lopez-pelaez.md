@@ -1,5 +1,5 @@
 name: Manuel Borja Lopez Pelaez
-image: manuel.jpg
+image: manuel.webp
 group: In-house Staff
 role: Ph.D. Student
 description: <b> Manuel Borja </b>  is a PhD student in Bioscience Engineering that comes from a background in statistics and natural sciences. His research concerns the application of machine learning techniques for optimization of drug formulation development.

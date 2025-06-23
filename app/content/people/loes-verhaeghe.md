@@ -1,5 +1,5 @@
 name: Loes Verhaeghe
-image: loes.jpg
+image: loes.webp
 group: Affiliate Staff
 role: Ph.D. Student
 description: <b> Loes Verhaeghe </b> is a Bioscience Engineering PhD student. Her doctoral research, conducted jointly at Ghent University and Université Laval, is centered on hybrid modelling of wastewater treatment processes. Her primary research objective involves the use of advanced image analysis methodologies to enhance the accuracy and predictive capabilities in characterizing the complex phenomena of flocculation and sedimentation in wastewater treatment.

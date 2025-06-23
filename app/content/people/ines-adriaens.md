@@ -1,5 +1,5 @@
 name: Ines Adriaens
-image: ines.jpg
+image: ines.webp
 group: Alumni
 role: Post-doc (Alumni)
 description: I’m <b> Ines Adriaens </b>, 31 y/o and I start a BOF postdoctoral position in the group of prof. Jan Verwaeren from April 1st onwards. As a bioscience engineer, my main interests professionally are in data analytics, time series analysis and the challenge of how domain expertise can be best included in models to interpret high-frequency sensor data. Both in my PhD and in my post-docs at KU Leuven and Wageningen University Research, the main application I worked on is “livestock monitoring and phenotyping”. Specifically, I try to bring the methodologies and more technical aspects of the analyses closer to the animal-context-farm side of the application to create impactful data-driven solutions and work towards a better livestock production sector.

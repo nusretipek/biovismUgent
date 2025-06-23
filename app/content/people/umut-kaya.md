@@ -1,5 +1,5 @@
 name: Umut Kaya
-image: umut.jpeg
+image: umut.webp
 group: Alumni
 role: Ph.D. (Alumni)
 description: <b> Umut Kaya </b> is a Data Scientist with a background in Physics. His PhD project focuses on developing surrogate physical models for pharmaceutical processes.

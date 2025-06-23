@@ -1,5 +1,5 @@
 name: Sait Mutlu Karahan
-image: mutlu.png
+image: mutlu.webp
 group: In-house Staff
 role: Ph.D. Student
 description: <b> Sait Mutlu Karahan </b> is a PhD student in Bioscience Engineering with a strong background in water resources management, computer programming, and data analysis. His current research involves the hybrid modeling of surface water systems using online sensor data.

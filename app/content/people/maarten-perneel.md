@@ -1,5 +1,5 @@
 name: Maarten Perneel
-image: maarten.jpg
+image: maarten.webp
 group: In-house Staff
 role: Ph.D. Student
 description: <b> Maarten Perneel </b> is a PhD student in Bioscience Engineering and has a strong background in plant-sciences, animal-sciences and machine learning. During his current research, he focusses on behaviour monitoring of dairy cattle by using a computer vision based pipeline. Therefore, he developed various models to detect animals, identify them and classify their behaviour accurately.

@@ -1,5 +1,5 @@
 name: Nusret Ipek
-image: nusret.jpg
+image: nusret.webp
 group: In-house Staff
 role: Ph.D. Student
 description: <b> Nusret Ipek </b> is a PhD student in Bioscience Engineering with a strong background in statistics, data analysis and computer programming. His current research involves automated analysis of caged animal videos and developing algorithms to deduct behavioral knowledge using machine learning.

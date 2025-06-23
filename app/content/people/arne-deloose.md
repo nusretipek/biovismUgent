@@ -1,5 +1,5 @@
 name: Arne Deloose
-image: arne.jpg
+image: arne.webp
 group: In-house Staff
 role: Ph.D. Student
 description: <b> Arne Deloose </b> is a PhD student in Bioscience Engineering with a strong background in environmental technologies, data analysis and natural language processing. His current research involves extracting structured knowledge from unstructured natural language texts using techniques such as knowledge graph construction.

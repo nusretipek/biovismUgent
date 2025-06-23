@@ -1,5 +1,5 @@
 name: Jan Verwaeren
-image: jan.jpg
+image: jan.webp
 group: Principal Investigators
 role: Assistant Professor
 description: <strong>Jan Verwaeren</strong> is an associate professor at Ghent University and a member of the research unit on Knowledge-based systems. As a computer scientist, his research interests lie at the crossroads between machine learning, mathematical optimization and image processing. His expertise includes methodological and algorithmic development as well as applied research in these areas. Jan his research interests lie at the crossroads between machine learning, mathematical optimization and image processing. From a methodological point of view, he likes to combine novel insights from the fields of convex and discrete optimization to develop new data analysis strategies for solving predictive modeling (with a focus on mixtures), image processing and multimodal data-analysis problems. 

@@ -1,5 +1,5 @@
 name: Alessandro Barbini
-image: alessandro.jpg
+image: alessandro.webp
 group: In-house Staff
 role: Ph.D. Student
 description: <b>Alessandro Barbini</b> is a PhD student in Bioscience Engineering with a strong background in applied mathematics and theoretical physics. His current research involves spatio-temporal modelling and decision focused learning.

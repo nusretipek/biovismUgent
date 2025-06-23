@@ -1,5 +1,5 @@
 name: Quentin Hervé
-image: quentin.jpg
+image: quentin.webp
 group: Alumni
 role: Ph.D. (Alumni)
 description: <b> Quentin Hervé </b> is a PhD student in Pharmaceutical Sciences with a strong background in Analytical Chemistry and Data Science applied to chemical processes. His ongoing research focuses on integrating deep learning techniques to enhance the quality analysis of products in drug manufacturing through high-resolution imaging and applying machine learning approaches to monitor bioprocess reactions.
